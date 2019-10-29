@@ -10,4 +10,4 @@ class Application
 
 end
 
-run Application.new
+
