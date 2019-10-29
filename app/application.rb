@@ -9,4 +9,5 @@ class Application
   end
 
 end
- run Application.new
+
+run Application.new
