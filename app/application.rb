@@ -1,1 +1,6 @@
-require 'rack'
+class Application
+
+  def call
+  end
+
+end
