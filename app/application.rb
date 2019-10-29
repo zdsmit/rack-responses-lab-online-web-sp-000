@@ -5,7 +5,7 @@ class Application
   end
 
   def time_message
-    (Time.now.to_i < 12) ? ['<em> Good morning! </em>'] : ['<em> Good afternoon! </em>']
+    (Time.now.to_i < 12) ? [/Morning/i] : [/Afternoon/i]
   end
 
 end
