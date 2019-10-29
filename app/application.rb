@@ -1,11 +1,14 @@
 class Application
 
   def call(env)
-    return [200, {'Content-Type' => 'text/html'}, time_message]
+    resp = Rack::Response.new
+    if Time.now.hour <= 12
+      resp.write "Good Morning!"
+    else
+      resp.write "Good Afternoon!"
+    end
+    resp.finish
   end
 
-  def time_message
-    (Time.now.to_i < 12) ? ['<em> Good Morning! </em>'] : ['<em> Good Afternoon! </em>']
-  end
 
 end
